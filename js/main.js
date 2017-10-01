@@ -13,6 +13,14 @@ $("div.enum-content").mouseenter(function(){
     var cid=$(this).attr("cid");
     showProduct(cid);
 })
+$("div.product").mouseenter(function(){
+    var cid=$(this).attr("cid");
+    showProduct(cid);
+})
+$("div.product").mouseleave(function(){
+    var cid=$(this).attr("cid");
+    hideProduct(cid);
+})
 $("div.enum-content").mouseleave(function(){
     var cid=$(this).attr("cid");
     hideProduct(cid);
@@ -31,4 +39,34 @@ $("div.product-item").mouseleave(function(){
     var vid=$(this).attr("vid");
     removeBorder(vid);
 })
+
+
+
 // 价格区间交互
+$("input.jsprice").keyup(function(){
+    var num=$(this).val();
+    if(num.length==0){
+        $("div.product-content").show();
+        return;
+    }
+    num=parseInt(num);
+    if(isNaN(num)){
+        num=1;
+    }
+    if(num<=0){
+        num=1;
+    }
+    $(this).val(num);
+    var begin=$("input.begin").val();
+    var end=$("input.end").val();
+    if(!isNaN(begin)&&!isNaN(end)){
+        $("div.product-content").hide();
+        $("div.product-content").each(function(){
+            var price=$(this).attr("price");
+            price=new Number(price);
+            if((price<=end)&&(price>=begin)){
+                $(this).show();
+            }
+        })
+    }
+})
