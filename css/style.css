@@ -90,14 +90,12 @@ nav.top{
 .footer-bottom span{
     color: #a4a4a4;
 }
-.footer-bottom img{
-    margin-left: -530px;
+.footer-bottom img#p1{
     margin-top:-55px;
+    margin-left: 60px;
 }
-.copyRgiht{
-    border: 3px solid red;
-    padding: 0px;
-    margin: 0px;
+.copyRgiht img{
+    margin: 20px;
 }
 
 /*=============================搜索Div==============================*/
@@ -191,7 +189,6 @@ img.logo{
     height: 510px;
 }
 .carousel-background{
-    border: 3px solid brown;
     background-color: #E8E8E8;
     position: absolute;
     width: 100%;
