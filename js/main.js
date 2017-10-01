@@ -1,3 +1,4 @@
+// 显示和隐藏效果     
 function showProduct(cid){
     $("div.enum-content[cid="+cid+"]").css("background-color","white");
     $("div.enum-content a[cid="+cid+"]").css("color","lightskyblue");
@@ -30,3 +31,4 @@ $("div.product-item").mouseleave(function(){
     var vid=$(this).attr("vid");
     removeBorder(vid);
 })
+// 价格区间交互

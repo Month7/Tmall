@@ -1,0 +1,248 @@
+@charset "utf-8";
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+/*===============================导航栏==============================*/
+nav.top{
+    background-color: #f2f2f2;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.top span,
+.top a{
+    margin: 0px 10px 0px 10px;
+    color: #999;
+    text-decoration: none;
+}
+.top a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*===============================页脚===============================*/
+.footer{
+    border-top: 1px solid #e7e7e7;
+    font-size: 12px;
+    font-family: Arial;
+    top:0px;
+}
+.footer-part2 a{
+    color: #999;
+}
+.footer a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+.footer-part1{
+    margin: 24px 0 24px 0;
+    text-align: center;
+}
+.footer-part2{
+    border-top: 1px solid #e7e7e7;
+    padding-top:30px;
+    margin: 0 20px;
+    width: 1140px;
+    margin: auto;
+}
+.eachContent{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+}
+.footer-background{
+    background-color: black;
+    width: 100%;
+    border-top: 2px solid #C40000;
+}
+.eachContent a{
+    display: block;
+    padding-top: 3px;
+}
+.footer-title{
+    color: #646464;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-bottom{
+    background-color: black;
+    /* border-top: 2px solid #C40000; */
+    text-align: left!important;
+    width: 1140px;
+    margin: auto;
+}
+.slash{
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+    padding: 0px 5px;
+}
+.footer-bottom span{
+    color: #a4a4a4;
+}
+.footer-bottom img#p1{
+    margin-top:-55px;
+    margin-left: 60px;
+}
+.copyRgiht img{
+    margin: 20px;
+}
+/*=============================搜索Div==============================*/
+.search{
+    background-color: #C40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+.search input{
+    width: 275px;
+    border: 1px solid transparent;
+    height: 36px;
+    margin: 1px;
+    outline:none;
+}
+.search button{
+    width: 110px;
+    height: 36px;
+    border: 2px solid #C40000;
+    background-color: #C40000;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+img.logo{
+    position: absolute;
+    top:30px;
+    left: 0px;
+    z-index: -1;
+}
+.search_below{
+    margin-left: -33px;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+.search a{
+    margin:0 15px 0 15px;
+    text-decoration: none;
+    color: #999;
+}
+.search a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*=======================头部=============================*/
+.content{
+    background-color: #FAF9F9;
+    margin: 40px 20px 20px 20px;
+    padding: 4px;
+}
+.sortbar{
+    float: left;
+    border-collapse: collapse;  /*单元格之间没有空隙*/
+}
+.sortbar td{
+    height: 17px;
+    font-size: 12px;
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+}
+.sortbar td a{
+    color: #806F66;
+}
+.glyphicon{
+    font-size: 10px;
+}
+.sortbar input{
+    border-width: 0px;
+    height: 15px;
+    width: 50px;
+}
+/*=========================产品列表=======================*/
+.product-main{
+    /* border: 3px solid white; */
+    max-width: 1200px;
+    margin: auto;
+}
+.product-content{
+    width: 225px;
+    height: 346px;
+    border: 3px solid #eee;
+    background-color: white;
+    margin: 12px 5px;
+    float: left;
+    cursor: pointer;
+}
+.product-top img{
+    width: 218px;
+    height: 215px;
+}
+.product-content:hover{
+    border: 3px solid red;
+}
+.product-content img{
+    width: 218px;
+    height: 215px;
+}
+.price{
+    margin-top:0px;
+    font-size: 20px;
+    color: #CC0000;
+    display: block;
+    padding-left: 4px;
+}
+.product-content a{
+    color: #333333;
+    font-size: 12px;
+    font-family: Arial;
+}
+.product-content a:hover{
+    text-decoration-color: #CC0000;
+    color: #CC0000;
+}
+.productInfo{
+    color: #999999;
+}
+.wangwang{
+    width: 20%;
+    border-top: 1px solid #eee;
+    height: 35px;
+    padding: 10px;
+}
+.wangwang img{
+    width: 16px;
+    height: 16px;
+}
+.month{
+    font-size: 12px;
+    font-family: Arial;
+    /* width: 175px; */
+    width: 80%;
+    height: 35px;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 10px 30px 2px 10px;
+    display: inline-block;
+}
+.dealNumber{
+    font-weight: bold;
+    color: #B57C5B;
+}
+.store{ 
+    color: #646464!important;
+    text-decoration-color: #646464!important;
+}
+.store2{
+    /* margin-left: 20px; */
+    color: #646464!important;
+    text-decoration-color: #646464!important;
+}
+img.arrow{
+    width: 18px;
+    height: 22px;
+}
+.special img{
+    width: 100%!important;
+    height: 100%!important;
+}
