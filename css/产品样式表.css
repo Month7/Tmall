@@ -1,0 +1,449 @@
+@charset "utf-8";
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+/*===============================导航栏==============================*/
+nav.top{
+    background-color: #f2f2f2;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.top span,
+.top a{
+    margin: 0px 10px 0px 10px;
+    color: #999;
+    text-decoration: none;
+}
+.top a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*===============================页脚===============================*/
+.footer{
+    border-top: 1px solid #e7e7e7;
+    font-size: 12px;
+    font-family: Arial;
+    top:0px;
+}
+.footer-part2 a{
+    color: #999;
+}
+.footer a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+.footer-part1{
+    margin: 24px 0 24px 0;
+    text-align: center;
+}
+.footer-part2{
+    border-top: 1px solid #e7e7e7;
+    padding-top:30px;
+    margin: 0 20px;
+    width: 1140px;
+    margin: auto;
+}
+.eachContent{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+}
+.footer-background{
+    background-color: black;
+    width: 100%;
+    border-top: 2px solid #C40000;
+}
+.eachContent a{
+    display: block;
+    padding-top: 3px;
+}
+.footer-title{
+    color: #646464;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-bottom{
+    background-color: black;
+    /* border-top: 2px solid #C40000; */
+    text-align: left!important;
+    width: 1140px;
+    margin: auto;
+}
+.slash{
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+    padding: 0px 5px;
+}
+.footer-bottom span{
+    color: #a4a4a4;
+}
+.footer-bottom img#p1{
+    margin-top:-55px;
+    margin-left: 60px;
+}
+.copyRgiht img{
+    margin: 20px;
+}
+
+/*=============================搜索Div==============================*/
+.search{
+    background-color: #C40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+.search input{
+    width: 275px;
+    border: 1px solid transparent;
+    height: 36px;
+    margin: 1px;
+    outline:none;
+}
+.search button{
+    width: 110px;
+    height: 36px;
+    border: 2px solid #C40000;
+    background-color: #C40000;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+img.logo{
+    position: absolute;
+    top:30px;
+    left: 0px;
+    z-index: -1;
+}
+.search_below{
+    margin-left: -33px;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+.search a{
+    margin:0 15px 0 15px;
+    text-decoration: none;
+    color: #999;
+}
+.search a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*===============================大图片和小图片====================================*/
+.products-main{
+    
+    width: 60%;
+    margin: auto;
+}
+.large{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+}
+.small{
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+}
+.pictures{
+    width: 400px;
+    float: left;   
+}
+.smallpictures{
+    width: 80%;
+    margin: 20px auto;
+}
+.small:hover{
+    border: 2px solid black;
+}
+/*==================================产品信息=====================================*/
+.info{
+    padding: 0 20px;
+    overflow: hidden;
+}
+.Title{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.subTitle{
+    color: #DD2727;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.priceDiv{
+    background-image: url(priceBackground.png);
+    height: 102px;
+    padding: 10px;
+    color: #666666;
+}
+.coupon{
+    margin-top:5px;
+}
+.before{
+    margin-top: 5px;
+}
+.beforeName{
+    color: #999999;
+    display: inline-block;
+    width: 68px;
+}
+.beforePrice{
+    font-family: Arial;
+    font-size: 12px;
+    color: #333333;
+    text-decoration: line-through;
+}
+.nowfuhao{
+    font-family: Arial;
+    font-size: 18px;
+    color: #C40000;
+}
+.nowPrice{
+    color: #C40000;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+}
+.nowName{
+    color: #999999;
+    display:inline-block;
+    width: 68px;
+    position: relative;
+    left: 0px;
+    top: -10px;
+}
+.reviewNumber{
+    margin: 20px 0;
+    border-top: 1px dotted #c9c9c9;
+    border-bottom: 1px dotted #c9c9c9;
+    padding: 10px;
+}
+.reviewNumber div{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+    border-right: 1px solid #E5DFDA;
+}
+.productNumber{
+    margin-left: 420px;
+    color: #999999;
+}
+.numberSetting{
+    margin-left: 48px;
+    border: 1px solid #999;
+    display: inline-block;
+    width: 43px;
+    height: 32px;
+    padding-top: 7px;
+}
+.productInput{
+    width: 80%;
+    height: 80%;
+    border:0px;
+}
+.updown img{
+    display: inline-block;
+    vertical-align:top;
+}
+.updown{
+    border: 1px solid #999;
+    display: block;
+    width: 20px;
+    height: 14px;
+    text-align: center;
+    padding-top: 4px;
+}
+.arrow{
+    display: inline-block;
+    width: 22px;
+    height: 32px;
+    vertical-align:top;
+}
+/*=============================颜色分类套餐类型==============================*/
+.colorAndType{
+    margin:0 auto 0 auto;
+    font-size: 12px;
+    font-family: Arial;
+    color: #999;
+    padding-top: 40px;
+    height: 220px;
+    position: relative;
+}
+.leftWords{
+    margin: 0px;
+    width: 7%;
+}
+.rightWords{
+    position: absolute;
+    left: 40px;
+    float: right;
+    top:40px;
+    width: 93%;
+}
+.type{
+    margin-left: 40px;
+    margin-bottom: 5px;
+    color: #999;
+    height: auto;
+    padding: 0 10px!important;
+    padding-right: 10px!important;
+    border: 2px solid #999;
+    cursor: pointer;
+    line-height: 30px;
+}
+.foodtype{
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: #999;
+    height: auto;
+    padding: 0 10px!important;
+    padding-right: 10px!important;
+    border: 2px solid #999;
+    cursor: pointer;
+    line-height: 30px;
+}
+.type:hover{
+    border: 2px solid #DD2727;
+}
+.foodtype:hover{
+    border: 2px solid #DD2727;
+}
+.type:active{
+    border: 2px solid #DD2727;
+}
+/*================================按钮=================================*/
+.buttons{
+    margin: 20px auto;
+    text-align: center;
+}
+.buttons button{
+    width: 180px;
+    height: 40px;
+    margin: 0 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: Arial;
+}
+.buy{
+    border: 1px solid #C40000;
+    background-color: #FFEDED;
+    color: #C40000;
+}
+.addcart{
+    border: 1px solid #C40000;
+    background-color: #C40000;
+    color: white;
+}
+.addcart .glyphicon{
+    font-size: 12px;
+    margin-right: 8px;
+}
+.buttons a:hover{
+    text-decoration: none;
+}
+.redColor{
+    color: #C40000;
+}
+.boldWord{
+    font-weight: bold;
+}
+.greenColor{
+    color: green;
+}
+/*============================下面的产品详情和评价===========================*/
+.product-data-1{
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+}
+.product-data-2{
+    width: 70%;
+    margin: 40px auto;
+}
+.data-title{
+    border: 1px solid #DFDFDF;
+    float: left;
+    border-left-width: 0px;
+}
+a.selected{
+    border-left: 1px solid #cfbfb1;
+    border-right: 1px solid #cfbfb1;
+    color: #b10000;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 46px;
+    width: 90px;
+    text-align: center;
+    position: relative;
+}
+.unselected{
+    padding: 0 20px;
+    /* border-right: 1px dotted #d2d2d2; */
+    color: #333333;
+}
+a.selected:before{
+    content: "";
+    display: block;
+    border: 1px solid #b00000;
+    width: 90px;
+    height: 0;
+    position: absolute;
+    top:-1px;
+    margin-left: -1px;
+}
+a.selected:after{
+    content: "";
+    display: block;
+    border-color: #b00000 transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top:-1px;
+    left: 50%;
+    margin-left: -5px;
+}
+.data-img img{
+    width: 790px;
+}
+.data-title a:hover{
+    text-decoration: none!important;
+    color: #C40000;
+}
+/*=====================评论======================*/
+.review-data{
+    padding-top: 50px;
+}
+.review-main{
+    border-bottom: 1px solid #e3e3e3;
+    margin: 10px 0;
+}
+.review-words{
+    width: 80%;
+    display: inline-block;
+    color: #333333;
+    margin: 5px 20px;
+    float: left;
+}
+.review-time{
+    margin: 15px 0px 0px 0px;
+    color: #CCCCCC;
+}
+.review-writer{
+    color: #404040;
+    margin: 5px 20px;
+    padding: 20px 0;
+}

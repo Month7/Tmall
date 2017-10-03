@@ -69,4 +69,50 @@ $("input.jsprice").keyup(function(){
             }
         })
     }
+});
+
+/*=======================缩略图效果=======================*/
+$("img.small").mouseenter(function(){
+    var url=$(this).attr("bigUrl");
+    $("img.large").attr("src",url);
+});
+$("img.large").load(function(){
+        $("img.small").each(function(){
+            var bigUrl = $(this).attr("bigUrl");
+            img = new Image();
+            img.src = bigUrl;
+            img.onload = function(){
+                $("div.img4load").append($(img));
+            };
+        });     
+    });
+// });
+// function test(){
+//     alert("!!");
+// }
+/*=============================图片和评价div切换==========================*/
+$(function(){
+    $("div.product-data-2").hide();
+    $("a.select1").click(function(){
+        $("div.product-data-1").show();
+        $("div.product-data-2").hide();
+    });
+    $("a.select2").click(function(){
+        $("div.product-data-1").hide();
+        $("div.product-data-2").show();
+    });
+});
+/*================================修改价格效果=================================*/
+$("a.addNumber").click(function(){
+    var num=$(".productInput").val();
+    num=parseInt(num);
+    num++;
+    // alert(num);
+    $(".productInput").val(num);
+});
+$("a.subNumber").click(function(){
+    var num=$(".productInput").val();
+    num=parseInt(num);
+    num--;
+    $(".productInput").val(num);
 })

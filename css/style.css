@@ -110,8 +110,8 @@ nav.top{
 .search input{
     width: 275px;
     border: 1px solid transparent;
-    height: 36px;
     margin: 1px;
+    height: 36px;
     outline:none;
 }
 .search button{
@@ -126,7 +126,7 @@ nav.top{
 img.logo{
     position: absolute;
     top:30px;
-    left: 0px;
+    left: 20%;
     z-index: -1;
 }
 .search_below{
