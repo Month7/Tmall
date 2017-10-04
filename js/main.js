@@ -115,4 +115,104 @@ $("a.subNumber").click(function(){
     num=parseInt(num);
     num--;
     $(".productInput").val(num);
-})
+});
+/*===================================浮动导航栏=================================*/
+$(function(){
+    $("div.floatled").hide();
+    // $("div.product-main").mouseenter(function(){
+    //     $("div.floatled").show();
+    // });
+    // $("div.product-mian").mouseleave(function(){
+    //     $("div.floatled").hide();
+    // });
+    // $("div.main").mouseover(function(){
+    //     $("div.floatled").hide();
+    // });
+    // $("div.carousel-background").mouseover(function(){
+    //     $("div.floatled").hide();
+    // });
+    // $("div.footer").mouseover(function(){
+    //     $("div.floatled").hide();
+    // });
+    // $("div.product-bar-1").mouseover(function(){
+    //     $("div.floatled-part-1").addClass("active-red");
+    // });
+    // $("div.product-bar-1").mouseout(function(){
+    //     $("div.floatled-part-1").removeClass("active-red");
+    // });
+    // $(".floatled ul li").addClass("active-red");
+    var isclick=false;
+    $(window).scroll(function(){
+        if(!isclick){
+        var _top=$(window).scrollTop();
+        if(_top>700&&_top<3700){
+            $("div.floatled").show();
+            if(_top>700&&_top<1400){
+                $("#1").addClass("active-red");
+                $("#2").removeClass("active-blue");
+                $("#3").removeClass("active-green");
+                $("#4").css("background-color","#626262");
+                $("#5").css("background-color","#626262");
+            }
+            if(_top>=1400&&_top<2100){
+                $("#1").removeClass("active-red");
+                $("#2").addClass("active-blue");
+                $("#3").removeClass("active-green");
+                $("#4").css("background-color","#626262");
+                $("#5").css("background-color","#626262");
+            }
+            if(_top>=2100&&_top<2800){
+                $("#2").removeClass("active-blue");
+                $("#3").addClass("active-green");
+                $("#4").css("background-color","#626262");
+                $("#5").css("background-color","#626262");
+            }
+            if(_top>=2800&&_top<3500){
+                $("#1").removeClass("active-red");
+                $("#2").removeClass("active-blue");
+                $("#3").removeClass("active-green");
+                $("#4").css("background-color","#18C9A9");
+                $("#5").css("background-color","#626262");
+            }
+            if(_top>=3500){
+                $("#1").removeClass("active-red");
+                $("#2").removeClass("active-blue");
+                $("#3").removeClass("active-green");
+                $("#4").css("background-color","#626262");
+                $("#5").css("background-color","#EA5FBD");
+            }
+        }
+        else{
+            $("div.floatled").hide();
+        }
+    }
+        // $(".floatled ul li").each(function(j){
+        //     var _index=$(this).index();                      //当前下标
+        //     var _height=$(this).offset().top;
+        //     _height=_height-491;
+        //     if(_height>_top){
+        //         $(this).eq(_index).append(_height);
+        //         return false;
+        //     }
+        // });
+    });
+    $("#1").click(function(){
+        $("html,body").animate({scrollTop: "710px"}, 500);
+    });
+    $("#2").click(function(){
+        $('html,body').animate({scrollTop: "1410px"}, 500);
+    });    
+    $("#3").click(function(){
+        $("html,body").animate({scrollTop:"2110px"},500);
+    });
+    $("#4").click(function(){
+        $("html,body").animate({scrollTop:"2810px"},500);
+    });
+    $("#5").click(function(){
+        $("html,body").animate({scrollTop:"3510px"},500);
+    });
+    $("#6").click(function(){
+        $("html,body").animate({scrollTop:"0px"},500);
+    });
+    });
+    
