@@ -214,5 +214,109 @@ $(function(){
     $("#6").click(function(){
         $("html,body").animate({scrollTop:"0px"},500);
     });
+/*=========================================购物车交互================================*/
+function isAny(){
+    var isAny=false;
+    $("img.radio-check").each(function(){
+        if("isselected"==$(this).attr("isselected")){
+            isAny=true;
+        }
+    })
+    if(isAny){
+        $("button.bottom-button").css("background-color","#C40000");
+        $("button.bottom-button").removeAttr("disabled");
+    }
+    else{
+        $("button.bottom-button").css("background-color","#AAAAAA");
+        $("button.bottom-button").css("disabled","disabled");
+    }
+}
+function checkIsAll(){
+    var isAll=true;
+    $("img.radio-check").each(function(){
+        if("false"==$(this).attr("isselected")){
+            isAll=false;
+        }
+    });
+    if(isAll){
+        $("img.radios-check").attr("isselect","isselect");
+        $("img.radios-check").attr("src","site/cartSelected.png");
+    }
+    else{
+        $("img.radios-check").attr("isselect","false");
+        $("img.radios-check").attr("src","site/cartNotSelected.png");
+    }
+}
+$("img.radio-check").click(function(){
+    var isselected=$(this).attr("isselected");
+    if(isselected=="isselected"){
+        $(this).attr("isselected","false");
+        $(this).attr("src","site/cartNotSelected.png");
+        $(this).parents("tr.cart-item").css("background-color","#fff");
+    }
+    else{
+        $(this).attr("isselected","isselected");
+        $(this).attr("src","site/cartSelected.png");
+        $(this).parents("tr.cart-item").css("background-color","#FFF8E1");
+    }
+    isAny();
+    cal();
+    checkIsAll();
+})  
+$("img.radios-check").click(function(){
+    var isselect=$(this).attr("isselect");
+    if(isselect=="isselect"){
+        $(this).attr("isselect","false");
+        $(this).attr("src","site/cartNotSelected.png");
+        $("img.radio-check").each(function(){
+            $(this).attr("isselected","false");
+            $(this).attr("src","site/cartNotSelected.png");
+            $(this).parents("tr.cart-item").css("background-color","#fff");
+        })
+    }
+    else{
+        $(this).attr("isselect","isselect");
+        $(this).attr("src","site/cartSelected.png");
+        $("img.radio-check").each(function(){
+            $(this).attr("isselected","isselected");
+            $(this).attr("src","site/cartSelected.png");
+            $(this).parents("tr.cart-item").css("background-color","#FFF8E1");
+        })
+    }
+    isAny();
+    cal();
+    checkIsAll();
+})
+function cal(){
+    var sumPrice=0;
+    var totalNumber=0;
+    $("img.radio-check[isselected='isselected']").each(function(){
+        var oid=$(this).attr("oid");
+        var price=$(".calPrice[oid="+oid+"]").text();
+        var num=$("input.text[oid="+oid+"]").val();
+        price=price.replace(/￥/g,"");
+        price=price*num;
+        sumPrice+=new Number(price);
+        totalNumber+=new Number(num);
+    });
+    $("span.bottom-price,span.title-price").html("￥"+sumPrice);
+    $("span.total").html(totalNumber);
+}
+$("a.increase").click(function(){
+    var pid=$(this).attr("pid");
+    var oid=$(".text[oid="+pid+"]").attr("oid");
+    var num=$(".text[oid="+oid+"]").val();
+    num++;
+    $(".text[oid="+oid+"]").val(num);
+    
+});
+$("a.decrease").click(function(){
+    var pid=$(this).attr("pid");
+    var oid=$(".text[oid="+pid+"]").attr("oid");
+    var num=$(".text[oid="+oid+"]").val();
+    num--;
+    $(".text[oid="+oid+"]").val(num);
+    
+});
     });
     
