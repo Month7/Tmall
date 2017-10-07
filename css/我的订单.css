@@ -1,0 +1,282 @@
+@charset "utf-8";
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+.main{
+    width: 1100px;
+    margin: auto;
+}
+a{
+    color:#999;
+}
+.redColor{
+    color: #C40000 !important;
+}
+/*===============================导航栏==============================*/
+nav.top{
+    background-color: #f2f2f2;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.top span,
+.top a{
+    margin: 0px 10px 0px 10px;
+    color: #999;
+    text-decoration: none;
+}
+.top a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*===============================页脚===============================*/
+.footer{
+    border-top: 1px solid #e7e7e7;
+    font-size: 12px;
+    font-family: Arial;
+    top:0px;
+}
+.footer-part2 a{
+    color: #999;
+}
+.footer a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+.footer-part1{
+    margin: 24px 0 24px 0;
+    text-align: center;
+}
+.footer-part2{
+    border-top: 1px solid #e7e7e7;
+    padding-top:30px;
+    margin: 0 20px;
+    width: 1140px;
+    margin: auto;
+}
+.eachContent{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+}
+.footer-background{
+    background-color: black;
+    width: 100%;
+    border-top: 2px solid #C40000;
+}
+.eachContent a{
+    display: block;
+    padding-top: 3px;
+}
+.footer-title{
+    color: #646464;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-bottom{
+    background-color: black;
+    /* border-top: 2px solid #C40000; */
+    text-align: left!important;
+    width: 1140px;
+    margin: auto;
+}
+.slash{
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+    padding: 0px 5px;
+}
+.footer-bottom span{
+    color: #a4a4a4;
+}
+.footer-bottom img#p1{
+    margin-top:-55px;
+    margin-left: 60px;
+}
+.copyRgiht img{
+    margin: 20px;
+}
+
+/*=============================搜索Div==============================*/
+.search{
+    background-color: #C40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+.search input{
+    width: 275px;
+    border: 1px solid transparent;
+    margin: 1px;
+    height: 36px;
+    outline:none;
+}
+.search button{
+    width: 110px;
+    height: 36px;
+    border: 2px solid #C40000;
+    background-color: #C40000;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+img.logo{
+    position: absolute;
+    top:30px;
+    left: 20%;
+    z-index: -1;
+}
+.search_below{
+    margin-left: -33px;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+.search a{
+    margin:0 15px 0 15px;
+    text-decoration: none;
+    color: #999;
+}
+.search a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*==================================我的订单=====================================*/
+.bought{
+    max-width: 1013px;
+    margin: 10px auto;
+}
+.titleType{
+    border-bottom:  2px solid #E8E8E8;
+    float: left!important;
+}
+.titleType a{
+    border-right:  1px solid #E8E8E8;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+.titleType a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+.titleTpye-active{
+    border-bottom: 2px solid #C40000;
+    float: left;
+}
+.titleTpye-active a{
+    color: #C40000;
+}
+.lastTitle{
+    float: left;
+    /* border-bottom:  2px solid #E8E8E8; */
+    overflow: hidden;
+   
+    height: 30px;
+    width: 534px;
+}
+.titleTable{
+    border: 1px solid #E8E8E8;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #F5F5F5;
+    text-align: center;
+    font-size: 12px;
+}
+.titleTable td{
+    padding: 12px 0;
+}
+/*=========================================================================*/
+.product-table{
+    border: 2px solid #ECECEC;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 12px;
+}
+.product-table:hover{
+    border: 2px solid #aaa!important;
+}
+.product-table td{
+    padding: 8px 10px;
+}
+.product-title{
+    background-color: #F1F1F1;
+}
+.wangwang{
+    display: inline-block;
+    width: 67px;
+    height: 22px;
+    background-image: url(wangwang.gif);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    /* background-attachment: scroll; */
+    /* background-position: -0px -0px; */
+    position: relative;
+    top: 0px;
+    left: 2px;
+}
+.orderListItemDelete{
+    display: inline-block;
+    margin: 0 10px;
+    color: #999999;
+    font-size: 16px;
+}
+.product-text{
+    position: relative;
+    height: 80px;
+}
+.product-text-icon{
+    position: absolute;
+    bottom: 0px;
+}
+.beforePrice{
+    color: #999999;
+    font-size: 14px;
+}
+.afterPrice{
+    color: #3c3c3c;
+    font-size: 14PX;
+}
+.td-product{
+    border: 1px solid #ECECEC;
+}
+.price{
+    font-weight: bold;
+    color: #3c3c3c;
+    font-size: 14px;
+}
+.carriage{
+    font-size: 12px;
+    color: #6c6c6c;
+}
+.review{
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    padding: 6px 12px;
+    color: #3c3c3c;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.review:hover{
+    color: #C40000;
+    border-color: #C40000;
+}
+.ensure{
+    background-color: #66B6FF;
+    border-radius: 2px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-width: 0px;
+}
+.ensure:hover{
+    background-color: #118ADB;
+}

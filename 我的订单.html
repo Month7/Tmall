@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的订单</title>
+<script src="js/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+<link href="css/我的订单.css" rel="stylesheet" type="text/css" media="all" />	
+<script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+<link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="shortcut icon" href="favicon.png" >
+</head>
+<body>
+        <div class="main">
+                <nav class="top">
+                        <a href="index.html">
+                            <span class="glyphicon glyphicon-home redColor">
+                                天猫主页
+                            </span>
+                        </a>
+                        <span>
+                            喵，欢迎来天猫
+                        </span>
+                        <span>
+                            <a href="产品1-TP笔记本.html">请登录</a>
+                            <a href="产品1-TP笔记本.html">免费注册</a>
+                        </span>
+                        <span style="float:right">
+                            <a href="我的订单.html">我的订单</a>
+                        <a href="购物车.html">
+                            <span class="glyphicon glyphicon-shopping-cart redColor"> 购物车0件</span>
+                        </a>
+                        </span>
+                </nav>
+                <div class="search">
+                    <img class="logo" src="site/logo.gif">
+                    <input type="text" placeholder="月饼 莲蓉蛋黄">
+                    <button type="button">搜索</button>
+                    <div class="search_below">
+                        <a href="产品1-TP笔记本.html">平衡车</a><span>|</span>
+                        <a href="产品1-TP笔记本.html">扫地机器人</a><span>|</span>
+                        <a href="产品1-TP笔记本.html">原汁机</a><span>|</span>
+                        <a href="产品1-TP笔记本.html">冰箱</a><span>|</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bought">
+                <div class="titleType">
+                    <div class="titleTpye-active"><a href="#" selectType="all">所有订单</a></div>
+                    <div class="titleType"><a href="#" selectType="waitPay">待付款</a></div>
+                    <div class="titleType"><a href="#" selectType="waitDelivery">待发货</a></div>
+                    <div class="titleType"><a href="#" selectType="waitConfirm">待收货</a></div>
+                    <div class="titleType"><a href="#" selectType="waitReview">待评价</a></div>
+                    <div class="lastTitle"></div>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="">
+                    <table class="titleTable">
+                        <tbody>
+                            <tr>
+                                <td>宝贝</td>
+                                <td>单价</td>
+                                <td>数量</td>
+                                <td>实付款</td>
+                                <td>交易操作</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="product-table" selectType="waitReview">
+                        <tbody>
+                            <tr class="product-title">
+                                <td colspan="2">
+                                    <b>2017-09-09 17:00:41</b> 订单号
+                                    <span>60224399049936963</span>
+                                </td>
+                                <td colspan="2">
+                                    <img src="site/orderItemTmall.png">天猫商城
+                                </td>
+                                <td colspan="1">
+                                    <a href="#">
+                                        <div class="wangwang"></div>
+                                    </a>
+                                </td>
+                                <td style="text-align:right;">
+                                    <a href="#">
+                                        <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="site/myproducts/2.jpg">
+                                </td>
+                                <td>
+                                    <div class="product-text">
+                                        <a href="#">Dell/戴尔 XPS13系列 XPS13-9350/9360/XPS15-9550/9560/M5510 [交易快照]</a>
+                                        <div class="product-text-icon">
+                                            <img src="site/creditcard.png">
+                                            <img src="site/7day.png">
+                                            <img src="site/promise.png">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td  class="td-product">
+                                    <div class="beforePrice">￥13，999.00</div>
+                                    <div class="afterPrice">￥9,324.15</div>
+                                </td>
+                                <td valign="top" style="text-align:center;width:100px" class="td-product" >
+                                    <span>1</span>
+                                </td>
+                                <td class="td-product" style="text-align:center;">
+                                    <div class="price">￥9,324.15</div>
+                                    <div class="carriage">(含运费：￥0.00)</div>
+                                </td>
+                                <td style="text-align:center;">
+                                    <div>
+                                        <button class="review">评价</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="product-table" selectType="waitConfirm">
+                            <tbody>
+                                <tr class="product-title"> 
+                                    <td colspan="2">
+                                        <b>2017-09-09 17:00:41</b> 订单号
+                                        <span>57760060242936963</span>
+                                    </td>
+                                    <td colspan="2">
+                                        <img src="site/orderItemTmall.png">天猫商城
+                                    </td>
+                                    <td colspan="1">
+                                        <a href="#">
+                                            <div class="wangwang"></div>
+                                        </a>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <a href="#">
+                                            <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="site/myproducts/1.jpg">
+                                    </td>
+                                    <td>
+                                        <div class="product-text">
+                                            <a href="#">戴尔XPS15 9560 9550 XPS13贴纸9343 9350笔记本外壳保护贴膜9360 [交易快照]</a>
+                                            <div class="product-text-icon">
+                                                <img src="site/creditcard.png">
+                                                <img src="site/7day.png">
+                                                <img src="site/promise.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-product">
+                                        <div class="beforePrice">￥2,499.00</div>
+                                        <div class="afterPrice">￥2,124.15</div>
+                                    </td>
+                                    <td valign="top" style="text-align:center;width:100px" class="td-product" >
+                                        <span>1</span>
+                                    </td>
+                                    <td class="td-product" style="text-align:center;">
+                                        <div class="price">￥2,124.15</div>
+                                        <div class="carriage">(含运费：￥0.00)</div>
+                                    </td>
+                                    <td class="td-product">
+                                        <div style="text-align:center">
+                                            <button class="ensure">确认收货</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="product-table" selectType="waitDelivery">
+                            <tbody>
+                                <tr class="product-title"> 
+                                    <td colspan="2">
+                                        <b>2017-09-15 17:00:41</b> 订单号
+                                        <span>28038011826936963</span>
+                                    </td>
+                                    <td colspan="2">
+                                        <img src="site/orderItemTmall.png">天猫商城
+                                    </td>
+                                    <td colspan="1">
+                                        <a href="#">
+                                            <div class="wangwang"></div>
+                                        </a>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <a href="#">
+                                            <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="site/myproducts/3.jpg">
+                                    </td>
+                                    <td>
+                                        <div class="product-text">
+                                            <a href="#">苹果联想戴尔笔记本电脑内胆包14air11.6Macbook12pro13.3寸15.6 [交易快照]</a>
+                                            <div class="product-text-icon">
+                                                <img src="site/creditcard.png">
+                                                <img src="site/7day.png">
+                                                <img src="site/promise.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-product">
+                                        <div class="beforePrice">￥198.00</div>
+                                        <div class="afterPrice">￥81.34</div>
+                                    </td>
+                                    <td valign="top" style="text-align:center;width:100px" class="td-product" >
+                                        <span>1</span>
+                                    </td>
+                                    <td class="td-product" style="text-align:center;">
+                                        <div class="price">￥81.34</div>
+                                        <div class="carriage">(含运费：￥0.00)</div>
+                                    </td>
+                                    <td class="td-product">
+                                        <!-- <div style="text-align:center">
+                                            <button class="ensure">确认收货</button>
+                                        </div> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="product-table" selectType="waitConfirm">
+                            <tbody>
+                                <tr class="product-title"> 
+                                    <td colspan="2">
+                                        <b>2017-09-09 17:00:41</b> 订单号
+                                        <span>61715147006936963</span>
+                                    </td>
+                                    <td colspan="2">
+                                        <img src="site/orderItemTmall.png">天猫商城
+                                    </td>
+                                    <td colspan="1">
+                                        <a href="#">
+                                            <div class="wangwang"></div>
+                                        </a>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <a href="#">
+                                            <span class="orderListItemDelete glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="site/myproducts/4.jpg">
+                                    </td>
+                                    <td>
+                                        <div class="product-text">
+                                            <a href="#">JavaScript语言精粹 javascript教程javascript高级程序设计javascript权威指南j [交易快照]</a>
+                                            <div class="product-text-icon">
+                                                <img src="site/creditcard.png">
+                                                <img src="site/7day.png">
+                                                <img src="site/promise.png">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-product">
+                                        <div class="beforePrice">￥49.00</div>
+                                        <div class="afterPrice">￥29.55</div>
+                                    </td>
+                                    <td valign="top" style="text-align:center;width:100px" class="td-product" >
+                                        <span>1</span>
+                                    </td>
+                                    <td class="td-product" style="text-align:center;">
+                                        <div class="price">￥29.55</div>
+                                        <div class="carriage">(含运费：￥0.00)</div>
+                                    </td>
+                                    <td class="td-product">
+                                        <div style="text-align:center">
+                                            <button class="ensure">确认收货</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+
+
+            <div class="footer">
+                    <div class="footer-part1">
+                        <img src="site/ensure.png">
+                    </div>
+                    <div class="footer-part2">
+                        <div class="eachContent">
+                            <span class="footer-title">
+                                购物指南
+                            </span>
+                            <a href="产品1-TP笔记本.html">免费注册</a>
+                            <a href="产品1-TP笔记本.html">开通支付宝</a>
+                            <a href="产品1-TP笔记本.html">支付宝充值</a>
+                        </div>
+                        <div class="eachContent">
+                            <span class="footer-title">
+                                天猫保障
+                            </span>
+                            <a href="产品1-TP笔记本.html">发票保障</a>
+                            <a href="产品1-TP笔记本.html">售后规则</a>
+                            <a href="产品1-TP笔记本.html">缺货赔付</a>
+                        </div>
+                        <div class="eachContent">
+                            <span class="footer-title">
+                                支付方式
+                            </span>
+                            <a href="产品1-TP笔记本.html">快捷支付</a>
+                            <a href="产品1-TP笔记本.html">信用卡</a>
+                            <a href="产品1-TP笔记本.html">余额宝</a>
+                            <a href="产品1-TP笔记本.html">蚂蚁花呗</a>
+                            <a href="产品1-TP笔记本.html">货到付款</a>
+                        </div>
+                        <div class="eachContent">
+                            <span class="footer-title">
+                                商家服务
+                            </span>
+                            <a href="产品1-TP笔记本.html">天猫规则</a>
+                            <a href="产品1-TP笔记本.html">商家入驻</a>
+                            <a href="产品1-TP笔记本.html">天猫智库</a>
+                            <a href="产品1-TP笔记本.html">物流服务</a>
+                            <a href="产品1-TP笔记本.html">喵言喵语</a>
+                            <a href="产品1-TP笔记本.html">运营服务</a>
+                        </div>
+                        <div class="eachContent">
+                            <span class="footer-title">
+                                手机天猫
+                            </span>
+                            <a href="产品1-TP笔记本.html"><img src="site/ma.png"></a>
+                        </div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="footer-background">
+                    <div class="footer-bottom">
+                        <img src="site/cateye.png" id="p1">
+                        <div style="padding:10px 0px;">
+                            <a href="产品1-TP笔记本.html">关于天猫</a>
+                            <a href="产品1-TP笔记本.html">帮助中心</a>
+                            <a href="产品1-TP笔记本.html">开放平台</a>
+                            <a href="产品1-TP笔记本.html">诚聘英才</a>
+                            <a href="产品1-TP笔记本.html">联系我们</a>
+                            <a href="产品1-TP笔记本.html">网站合作</a>
+                            <a href="产品1-TP笔记本.html">法律声明</a>
+                            <a href="产品1-TP笔记本.html">知识产权</a>
+                            <a href="产品1-TP笔记本.html">廉正举报</a>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="padding:10px 0px;">
+                            <a href="#nowhere"> 阿里巴巴集团</a><span class="slash">|</span>
+                            <a href="#nowhere"> 淘宝网</a><span class="slash">|</span>
+                            <a href="#nowhere">天猫 </a><span class="slash">|</span>
+                            <a href="#nowhere">  聚划算</a><span class="slash">|</span>
+                            <a href="#nowhere">全球速卖通</a><span class="slash">|</span>
+                            <a href="#nowhere">阿里巴巴国际交易市场</a><span class="slash">|</span>
+                            <a href="#nowhere">1688</a><span class="slash">|</span>
+                            <a href="#nowhere">阿里妈妈</a><span class="slash">|</span>
+                            <a href="#nowhere">  阿里旅行·去啊  </a><span class="slash">|</span>
+                            <a href="#nowhere">  阿里云计算    </a><span class="slash">|</span>
+                            <a href="#nowhere">  阿里通信     </a><span class="slash">|</span>
+                            <a href="#nowhere">  YunOS    </a><span class="slash">|</span>
+                            <a href="#nowhere">  阿里旅行·去啊  </a><span class="slash">|</span>
+                            <a href="#nowhere">   万网  </a><span class="slash">|</span>
+                            <a href="#nowhere">  高德   </a><span class="slash">|</span>
+                            <a href="#nowhere"> 优视    </a><span class="slash">|</span>
+                            <a href="#nowhere">  友盟   </a><span class="slash">|</span>
+                            <a href="#nowhere">  虾米   </a><span class="slash">|</span>
+                            <a href="#nowhere">  天天动听 </a><span class="slash">|</span>
+                            <a href="#nowhere">  来往   </a><span class="slash">|</span>
+                            <a href="#nowhere">  钉钉   </a><span class="slash">|</span>
+                            <a href="#nowhere">  支付宝      </a>
+                        </div>
+                        <div class="license">
+                            <span></span>
+                            <br>
+                            <span>增值电信业务经营许可证： 浙B2-20110446</span>
+                            <span>网络文化经营许可证：浙网文[2015]0295-065号</span>
+                            <span>互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 </span>
+                            <span>互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</span>
+                            <div class="date"><span>© 2003-2017 TMALL.COM 版权所有</span></div>
+                            <div class="copyRight">
+                                <img src="site/copyRight1.jpg">
+                                <img src="site/copyRight2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <script src="js/main.js"></script>
+</body>
+</html>

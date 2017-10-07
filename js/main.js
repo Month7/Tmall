@@ -215,6 +215,23 @@ $(function(){
         $("html,body").animate({scrollTop:"0px"},500);
     });
 /*=========================================购物车交互================================*/
+
+function formatMoney(num){                       //以千进制格式化金额
+    num = num.toString().replace(/\$|\,/g,'');  
+    if(isNaN(num))  
+        num = "0";  
+    sign = (num == (num = Math.abs(num)));  
+    num = Math.floor(num*100+0.50000000001);  
+    cents = num%100;  
+    num = Math.floor(num/100).toString();  
+    if(cents<10)  
+    cents = "0" + cents;  
+    for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)  
+    num = num.substring(0,num.length-(4*i+3))+','+  
+    num.substring(num.length-(4*i+3));  
+    return (((sign)?'':'-') + num + '.' + cents);  
+}
+
 function isAny(){
     var isAny=false;
     $("img.radio-check").each(function(){
@@ -292,7 +309,7 @@ function cal(){
     var totalNumber=0;
     $("img.radio-check[isselected='isselected']").each(function(){
         var oid=$(this).attr("oid");
-        var price=$(".calPrice[oid="+oid+"]").text();
+        var price=$(".nowPrice[oid="+oid+"]").text();
         var num=$("input.text[oid="+oid+"]").val();
         price=price.replace(/￥/g,"");
         price=price*num;
@@ -308,7 +325,17 @@ $("a.increase").click(function(){
     var num=$(".text[oid="+oid+"]").val();
     num++;
     $(".text[oid="+oid+"]").val(num);
-    
+    var oid_=$("img.radio-check[oid="+oid+"]").attr("oid");
+    var num_=$("input.text[oid="+oid_+"]").val();
+    var price_=$(".nowPrice[oid="+oid_+"]").text();
+    price_=price_.replace(/￥/g,"");
+    price_=price_*num_;
+    var smallPrice=new Number(price_);
+    smallPrice=formatMoney(smallPrice);
+    $("span.calPrice[oid="+oid+"]").html("￥"+smallPrice);
+    isAny();
+    cal();
+    checkIsAll();
 });
 $("a.decrease").click(function(){
     var pid=$(this).attr("pid");
@@ -316,7 +343,28 @@ $("a.decrease").click(function(){
     var num=$(".text[oid="+oid+"]").val();
     num--;
     $(".text[oid="+oid+"]").val(num);
-    
+    var oid_=$("img.radio-check[oid="+oid+"]").attr("oid");
+    var num_=$("input.text[oid="+oid_+"]").val();
+    var price_=$(".nowPrice[oid="+oid_+"]").text();
+    price_=price_.replace(/￥/g,"");
+    price_=price_*num_;
+    var smallPrice=new Number(price_);
+    smallPrice=formatMoney(smallPrice);
+    $("span.calPrice[oid="+oid+"]").html("￥"+smallPrice);
+    isAny();
+    cal();
+    checkIsAll();
 });
+/*========================================我的订单页交互=========================================*/
+$("a[selectType]").click(function(){
+    var selectType=$(this).attr("selectType");
+    if("all"==selectType){
+        $("table[selectType]").show();
+    }
+    else{
+        $("table[selectType]").hide();
+        $("table[selectType="+selectType+"]").show();
+    }
+})
     });
     
