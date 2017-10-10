@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ThinkPad t570</title>
-<link href="css/产品样式表.css" rel="stylesheet" type="text/css" media="all" />	
+<title>结算</title>
+<link href="css/结算页面.css" rel="stylesheet" type="text/css" media="all" />	
 <link rel="shortcut icon" href="favicon.png" >
 <script src="js/jquery.min.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,152 +42,126 @@
                 <a href="#">冰箱</a><span>|</span>
             </div>
         </div>
-        <div class="products-main">
-            <div class="pictures">
-            <img src="site/TP/x1c-1.jpg" class="large">
-            <div class="smallpictures">
-                <img  class="small" src="site/TP/s-1.jpg" bigUrl="site/TP/x1c-1.jpg">
-                <img src="site/TP/s-2.jpg" class="small" bigUrl="site/TP/x1c-2.jpg">
-                <img src="site/TP/s-3.jpg" class="small" bigUrl="site/TP/x1c-3.jpg">
-                <img src="site/TP/s-4.jpg" class="small" bigUrl="site/TP/x1c-4.jpg">
-                <img src="site/TP/s-5.jpg" class="small" bigUrl="site/TP/x1c-5.jpg">
+        <div class="pay-body">
+            <div class="pay-image">
+                <img src="site/simpleLogo.png" style="float:left;">
+                <img src="site/buyflow.png" style="float:right;">
             </div>
-            <div class="img4load hidden"></div>    
-            <div style="clear:both"></div>  
+            <div style="clear:both;"></div>
+            <div class="pay-address">
+            <div class="address-title">
+                请输入收货地址
             </div>
-             <div class="info">
-                <div class="Title">
-                    ThinkPad X1 Carbon 20HRA007CD 超轻薄商务笔记本电脑手提
-                </div>
-                <div class="subTitle">超轻薄商务旗舰</div>
-                <div class="priceDiv">
-                    <div class="coupon">
-                        <img height="16px" src="site/gouwujuan.png">
-                        <span>全天猫实物商品通用</span>
-                    </div>
-                    <div class="before">
-                        <span class="beforeName">价格</span>
-                        <span class="beforefuhao">￥</span>
-                        <span class="beforePrice">8799.00</span>
-                    </div>
-                    <div class="now">
-                        <span class="nowName">促销价</span>
-                        <span class="nowfuhao">￥</span>
-                        <span class="nowPrice">379.05</span>
-                    </div>
-                </div>
-                <div class="reviewNumber">
-                    <div>销量<span class="redColor boldWord">50</span></div>
-                    <div>累积评价<span class="redColor boldWord">2</span></div>
-                    <div style="border:0px;">送天猫积分<span class="greenColor boldWord">849</span></div>
-                </div>
-                <div class="colorAndType">
-                    <div class="leftWords">版本<br><br><br><br><br><br><br>套餐类型</div>
-                    <div class="rightWords">
-                        <div class="type" style="width:280px;">
-                        英特尔 酷睿i7 7500u 8g 无机械硬盘 256GB
-                    </div>
-                     <div class="type" style="width:280px;">
-                        英特尔 酷睿i5 7200u 8g 无机械硬盘 512GB
-                    </div>
-                    <div class="type" style="width:280px;">
-                        英特尔 酷睿i7 7500u 8g 无机械硬盘 512GB
-                    </div>
-                    <div class="foodtype" style="margin-left: 40px;">
-                        官方标配
-                    </div>
-                    <div class="foodtype">
-                        套餐一
-                    </div>
-                    <div class="foodtype">
-                        套餐二
-                    </div>
-                    <div class="foodtype">
-                        套餐三
-                    </div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    </div> 
-                </div>
-                <div class="productNumber">
-                    <span>数量</span>
+            <table class="address-table">
+                <tr>
+                    <td>详细地址<span style="color:red;font-size:8px;">*</span></td>
+                    <td>
+                        <textarea placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息" name="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        邮政编码
+                    </td>
+                    <td>
+                        <input type="text" placeholder="如果您不清楚邮递区号，请填写000000" name="post">
+                    </td>
+                </tr>
+                <tr>
+                    <td>收货人姓名<span style="color:red;font-size:8px;">*</span></td>
+                    <td>
+                        <input type="text" placeholder="长度不超过25个字符" name="receiver">
+                    </td>
+                </tr>
+                <tr>
+                    <td>手机号码<span style="color:red;font-size:8px;">*</span></td>
+                    <td>
+                        <input type="text" placeholder="请输入11位手机号码" name="mobile">
+                    </td>
+                </tr>
+            </table>
+            <div class="pay-ensureText">确认订单信息</div>
+            <table class="pay-bottomTable">
+                <thead>
+                    <tr>
+                        <th style="text-align:left!important;" colspan="2">
+                            <img src="site/tmallbuy.png" width="15px">
+                            <a href="#" class="storeLink">店铺:</a>
+                            <a href="#" class="storeLink">天猫店铺</a>
+                            <a href="#"><span class="wangwang"></span></a>
+                        </th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                        <th>配送方式</th>
+                    </tr>
+                    <tr class="rowborder">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody class="pay-bottomBody">
+                    <tr>
+                        <td>
+                            <a href="#"><img src="pay/1.jpg" class="pay-bottomBody-img"></a>
+                        </td>
+                        <td style="text-align:left;">
+                            <a href="#" class="productLink">Hisense/海信 LED40EC520UA 40英寸4K智能平板液晶电视机WIFI网络</a>
+                            <img src="site/creditcard.png"  class="ensureImg">
+                            <img src="site/7day.png" class="ensureImg">
+                            <img src="site/promise.png" class="ensureImg">
+                        </td>
+                        <td>
+                            ￥1,439.40
+                        </td>
+                        <td style="text-align:center;">1</td>
+                        <td style="color:#CC0000;font-weight:bold";>￥1,439.40</td>
+                        <td class="" rowspan="3">
+                            <label class="delivery">
+                                <input type="radio">普通配送
+                            </label>
+                            <select class="">
+                                <option>快递 免邮费</option>
+                                <option>不送</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="sumMoney">
+                <div style="float:left;">
+                    <span>给卖家留言</span>
                     <span>
-                        <span class="numberSetting">
-                            <input type="text" value="1" class="productInput">
-                        </span>
-                        <span class="arrow">
-                            <a class="addNumber" href="#">
-                            <span class="updown">
-                                <img src="site/increase.png">
-                            </span>
-                            </a>
-                            <span style="height:4px;display:block;"></span>
-                            <a class="subNumber" href="#">
-                                <span class="updown">
-                                    <img src="site/decrease.png">
-                                </span>
-                            </a>
-                        </span>件
+                        <img src="site/leaveMessage.png" class="leaveMessage-img">
                     </span>
-                    <span>库存66件</span>
+                    <span class="leaveMessage-text" style="display:none;">
+                        <textarea class="leaveMessage-textarea"></textarea>
+                        <div>
+                            <span>还可以输入200个字符</span>
+                        </div>
+                    </span>
                 </div>
-                <div class="buttons">
-                    <a href="#"><button class="buy" onclick="test()">立即购买</button></a>
-                    <a href="#"><button class="addcart"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</button></a>
-                </div>
-        </div>
-        <div style="clear:both"></div>
-        </div>
-    </div>
-    <div class="product-data-1">
-        <div class="data-title">
-            <a class="toptitle selected select1" href="#">商品详情</a>
-            <a class="toptitle select2 unselected" href="#">累积评价<span style="color:blue">36</span></a>
-        </div>
-        <div style="clear:both;"></div>
-        <div class="data-image">
-            <img src="site/TP/data-1.jpg">
-            <img src="site/TP/data-2.jpg">
-            <img src="site/TP/data-3.jpg">
-            <img src="site/TP/data-4.jpg">
-            <img src="site/TP/data-5.jpg">
-            <img src="site/TP/data-6.jpg">
-        </div>
-        
-    </div>
-    <div class="product-data-2">
-            <div class="data-title">
-                    <a class="toptitle select1 unselected" href="#">商品详情</a>
-                    <a class="toptitle selected select2" href="#">累积评价<span style="color:blue">36</span></a>
+             
+                <div style="float:right;">
+                    店铺合计(含运费)：￥1,439.40
                 </div>
                 <div style="clear:both;"></div>
-        <div class="review-data">
-            <div class="review-main">
-                <div class="review-words">
-                        ThinkPad质量不是一般的好，如果能便宜点就更好了。 客服爱迪生、达芬奇 全五分，不要忘记10月份开发票哦
                 </div>
-                <div class="review-writer">
-                        袁***2<span style="color:#999999;">（匿名）</span>
+                <div class="realPay">
+                    实付款： <span class="realPayMoney">￥1,439.40</span>
                 </div>
-                <div class="review-time">
-                        09.27
+                <div style="clear:both;"></div>
+                <div class="submitButton">
+                    <button type="button" class="submit">提交</button>
                 </div>
-            </div>
-            <div class="review-main">
-                <div class="review-words">
-                        ThinkPad质量不是一般的好，如果能便宜点就更好了。 客服爱迪生、达芬奇 全五分，不要忘记10月份开发票哦
-                </div>
-                <div class="review-writer">
-                        袁***2<span style="color:#999999;">（匿名）</span>
-                </div>
-                <div class="review-time">
-                        09.27
-                </div>
+                <div style="clear:both;"></div>
+           
             </div>
         </div>
-    </div>
-
-
         <div class="footer">
                 <div class="footer-part1">
                     <img src="site/ensure.png">
@@ -293,6 +267,6 @@
                 </div>
             </div>
            </div>
-</body>
-<script src="js/main.js"></script>
-</html>
+           <script src="js/main.js"></script>
+           </body>
+           </html>

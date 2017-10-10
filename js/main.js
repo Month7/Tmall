@@ -366,5 +366,11 @@ $("a[selectType]").click(function(){
         $("table[selectType="+selectType+"]").show();
     }
 })
+/*==================================留言板交互=============================================*/
+$("img.leaveMessage-img").click(function(){
+    $(this).hide();
+    $("span.leaveMessage-text").show();
+    $("div.sumMoney").css("height","100px");
+})
     });
     

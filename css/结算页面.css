@@ -1,0 +1,274 @@
+@charset "utf-8";
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+/*===============================导航栏==============================*/
+nav.top{
+    background-color: #f2f2f2;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.top span,
+.top a{
+    margin: 0px 10px 0px 10px;
+    color: #999;
+    text-decoration: none;
+}
+.top a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*===============================页脚===============================*/
+.footer{
+    border-top: 1px solid #e7e7e7;
+    font-size: 12px;
+    font-family: Arial;
+    top:0px;
+}
+.footer-part2 a{
+    color: #999;
+}
+.footer a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+.footer-part1{
+    margin: 24px 0 24px 0;
+    text-align: center;
+}
+.footer-part2{
+    border-top: 1px solid #e7e7e7;
+    padding-top:30px;
+    margin: 0 20px;
+    width: 1140px;
+    margin: auto;
+}
+.eachContent{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+}
+.footer-background{
+    background-color: black;
+    width: 100%;
+    border-top: 2px solid #C40000;
+}
+.eachContent a{
+    display: block;
+    padding-top: 3px;
+}
+.footer-title{
+    color: #646464;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-bottom{
+    background-color: black;
+    /* border-top: 2px solid #C40000; */
+    text-align: left!important;
+    width: 1140px;
+    margin: auto;
+}
+.slash{
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+    padding: 0px 5px;
+}
+.footer-bottom span{
+    color: #a4a4a4;
+}
+.footer-bottom img#p1{
+    margin-top:-55px;
+    margin-left: 60px;
+}
+.copyRgiht img{
+    margin: 20px;
+}
+
+/*=============================搜索Div==============================*/
+.search{
+    background-color: #C40000;
+    width: 400px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+.search input{
+    width: 275px;
+    border: 1px solid transparent;
+    height: 36px;
+    margin: 1px;
+    outline:none;
+}
+.search button{
+    width: 110px;
+    height: 36px;
+    border: 2px solid #C40000;
+    background-color: #C40000;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+img.logo{
+    position: absolute;
+    top:30px;
+    left: 0px;
+    z-index: -1;
+}
+.search_below{
+    margin-left: -33px;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+.search a{
+    margin:0 15px 0 15px;
+    text-decoration: none;
+    color: #999;
+}
+.search a:hover{
+    color: #C40000;
+    text-decoration: none;
+}
+/*================================================结算页面==============================================*/
+.pay-body{
+    max-width: 1013px;
+    margin: 20px auto;
+}
+.pay-address{
+    text-align: left;
+}
+.address-title{
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #333333;
+}
+table.address-table{
+    width: 600px;
+    font-size: 12px;
+    margin: 20px 20px;
+}
+.address-table td{
+    color: #333333;
+    padding-right: 5px;
+    height: 30px;
+    vertical-align: top;
+}
+.address-table td textarea{
+    width: 400px;
+    border: 1px solid #AFAFAF;
+    margin-bottom: 10px;
+}
+.address-table td input{
+    width: 200px;
+    border: 1px solid #AFAFAF;
+}
+.pay-ensureText{
+    color: #333333;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.pay-bottomTable{
+    font-size: 12px;
+}
+.pay-bottomTable th{
+    text-align: center;
+    font-size: 12px;
+    font-family: 宋体;
+    color: #999999;
+    padding-bottom: 5px;
+}
+.pay-bottomTable tr.rowborder td{
+    height: 3px;
+    background-color: #b2d1ff;
+    border-right: 2px solid #fff;
+}
+.storeLink{
+    text-decoration: none;
+    color: black;
+    font-family: 宋体;
+    font-weight: normal;
+}
+.storeLink:hover{
+    color: black;
+    font-family: 宋体;
+    font-weight: normal; 
+}
+.wangwang{
+    display: inline-block;
+    background-image: url(wangwang.png);
+    background-attachment: scroll;
+    background-position: 0px 9px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.pay-bottomBody-img{
+    width: 50px;
+    height: 50px;
+    border: 1px  solid #E9E9E9;
+}
+.pay-bottomBody td{
+    border-bottom:  1px solid #E5E5E5;
+    padding: 10px;
+}
+.productLink{
+    display: block;
+    color: #666666;
+}
+.productLink:hover{
+    color: #666666;
+}
+.ensureImg{
+    width: 16px;
+    height: 16px;
+}
+.delivery{
+    color: #666666;
+    font-family: 宋体;
+    font-weight: normal;
+}
+.sumMoney{
+    padding: 20px;;
+    border-top: 2px solid #B4D0FF;
+    background-color: #F2F6FF;
+    height: 50px;
+}
+.sumMoney span{
+    color: #999999;
+}
+.realPay{
+    float: right;
+    margin-top: 40px;
+    height: 40px;
+}
+.submitButton{
+    margin-top: 40px;
+}
+.submit{
+    background-color: #C40000!important;
+    border: 1px solid #C40000;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 14px;
+    color: white;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    margin: 10px 0;
+    float: right;
+}
+.realPayMoney{
+    color: #C40000!important;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px dotted #F2F6FF;
+}
