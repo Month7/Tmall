@@ -1,16 +1,39 @@
 // 显示和隐藏效果     
+var color="";
 function showProduct(cid){
     $("div.enum-content[cid="+cid+"]").css("background-color","white");
     $("div.enum-content a[cid="+cid+"]").css("color","lightskyblue");
     $("div.product[cid="+cid+"]").show();
+    console.log("color:"+color);
+    $("a.aColor[xid="+cid+"]").css("color",color);
 }
 function hideProduct(cid){
     $("div.enum-content[cid="+cid+"]").css("background-color","#e2e2e3");
     $("div.enum-content a[cid="+cid+"]").css("color","black");
     $("div.product[cid="+cid+"]").hide();
+    $("a.aColor[xid="+cid+"]").css("color","black");
 }
 $("div.enum-content").mouseenter(function(){
     var cid=$(this).attr("cid");
+    switch(cid){
+        case "1": color="red";break;
+        case "2": color="red";break;
+        case "3": color="blue";break;
+        case "4": color="blue";break;
+        case "5": color="orange";break;
+        case "6": color="yellowgreen";break;
+        case "7": color="blueviolet";break;
+        case "8": color="green";break;
+        case "9": color="#FF0036";break;
+        case "10":color="aqua";break;
+        case "11":color="pink";break;
+        case "12":color="#8ED6FF";break;
+        case "13":color="#D1C9FA";break;
+        case "14":color="blue";break;
+        case "15":color="#FE0240";break;
+        case "16":color="brown";break;
+        case "17":color="blue";break;
+    }
     showProduct(cid);
 })
 $("div.product").mouseenter(function(){
@@ -119,34 +142,18 @@ $("a.subNumber").click(function(){
 /*===================================浮动导航栏=================================*/
 $(function(){
     $("div.floatled").hide();
-    // $("div.product-main").mouseenter(function(){
-    //     $("div.floatled").show();
-    // });
-    // $("div.product-mian").mouseleave(function(){
-    //     $("div.floatled").hide();
-    // });
-    // $("div.main").mouseover(function(){
-    //     $("div.floatled").hide();
-    // });
-    // $("div.carousel-background").mouseover(function(){
-    //     $("div.floatled").hide();
-    // });
-    // $("div.footer").mouseover(function(){
-    //     $("div.floatled").hide();
-    // });
-    // $("div.product-bar-1").mouseover(function(){
-    //     $("div.floatled-part-1").addClass("active-red");
-    // });
-    // $("div.product-bar-1").mouseout(function(){
-    //     $("div.floatled-part-1").removeClass("active-red");
-    // });
-    // $(".floatled ul li").addClass("active-red");
     var isclick=false;
     $(window).scroll(function(){
         if(!isclick){
         var _top=$(window).scrollTop();
+        if(_top>700){
+            $("div.scroll-banner").fadeIn(500);
+        }
+        else{
+            $("div.scroll-banner").fadeOut();
+        }
         if(_top>700&&_top<3700){
-            $("div.floatled").show();
+            $("div.floatled").fadeIn(1000);
             if(_top>700&&_top<1400){
                 $("#1").addClass("active-red");
                 $("#2").removeClass("active-blue");
@@ -183,18 +190,9 @@ $(function(){
             }
         }
         else{
-            $("div.floatled").hide();
+            $("div.floatled").fadeOut();
         }
     }
-        // $(".floatled ul li").each(function(j){
-        //     var _index=$(this).index();                      //当前下标
-        //     var _height=$(this).offset().top;
-        //     _height=_height-491;
-        //     if(_height>_top){
-        //         $(this).eq(_index).append(_height);
-        //         return false;
-        //     }
-        // });
     });
     $("#1").click(function(){
         $("html,body").animate({scrollTop: "710px"}, 500);
@@ -373,4 +371,23 @@ $("img.leaveMessage-img").click(function(){
     $("div.sumMoney").css("height","100px");
 })
     });
-    
+/*=================================浏览器兼容============================*/
+function adjustStyle(width) { 
+    width = parseInt(width); 
+    if ((width < 1700)&&(width>=1400)) { 
+        $("#size-stylesheet").attr("href", "css/style-md.css"); 
+    } else if ((width >= 1701) && (width < 2000)) { 
+        $("#size-stylesheet").attr("href", "css/style-lg.css"); 
+    } else if((width>=1000)&&(width<1400)){
+        $("#size-stylesheet").attr("href", "css/style-sm.css"); 
+    } 
+    else { 
+       $("#css").attr("href", "<?php bloginfo('stylesheet_url'); ?>"); 
+    } 
+} 
+$(function() { 
+    adjustStyle($(this).width()); 
+    $(window).resize(function() { 
+        adjustStyle($(this).width()); 
+    }); 
+});
