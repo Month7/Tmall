@@ -391,3 +391,19 @@ $(function() {
         adjustStyle($(this).width()); 
     }); 
 });
+/*============================================猫耳朵交互========================================*/
+$(function(){
+    $("div.rightmenu span").mouseenter(function(){
+        var left_=$(this).position().left;
+        var width_=$(this).css("width");
+        var top_=$(this).position().top;
+        var left=parseInt(left_)+(parseInt(width_)/2);
+        var top=parseInt(top_);
+        $("img#catear").css("left",left);
+        $("img#catear").css("top",top-20);
+        $("img#catear").fadeIn(500);
+    })
+    $("div.rightmenu span").mouseleave(function(){
+        $("img#catear").hide();
+    });
+})

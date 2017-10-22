@@ -97,6 +97,12 @@ nav.top{
 .copyRgiht img{
     margin: 20px;
 }
+/*=============================猫耳朵=========================*/
+.catear{
+    position: absolute;
+    height: 15px;
+    display: none;
+}
 /*======================导航和轮播=========================*/
 .carsousel_nav{
     width: 100%;
