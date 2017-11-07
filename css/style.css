@@ -348,6 +348,7 @@ nav.top{
     cursor: pointer;
     background-image: url(logo.png);
 }
+
 .right-banner-logo:hover{
     background-image: url(logo-hover.png);
 }
@@ -362,4 +363,16 @@ nav.top{
 }
 .right-banner-cart:hover{
     background-image: url(cart-hover.png);
+}
+.right-banner-money{
+    display: block;
+    position: absolute;
+    background-image: url(money.png);
+    top:360px;
+    width: 100%;
+    height: 42px;
+    cursor: pointer;
+}
+.right-banner-money:hover{
+    background-image: url();
 }

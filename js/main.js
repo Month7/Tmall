@@ -213,7 +213,9 @@ $(function(){
         $("html,body").animate({scrollTop:"0px"},500);
     });
 /*=========================================购物车交互================================*/
-
+var $radioCart=$("img.radio-check");
+var $allCart=$("img.radios-check");
+var $bottomBtn=$(".bottom-button,.title-button");
 function formatMoney(num){                       //以千进制格式化金额
     num = num.toString().replace(/\$|\,/g,'');  
     if(isNaN(num))  
@@ -229,130 +231,117 @@ function formatMoney(num){                       //以千进制格式化金额
     num.substring(num.length-(4*i+3));  
     return (((sign)?'':'-') + num + '.' + cents);  
 }
-
 function isAny(){
     var isAny=false;
-    $("img.radio-check").each(function(){
-        if("isselected"==$(this).attr("isselected")){
+    $radioCart.each(function(){
+        if("true"==$(this).attr("isselected")){
             isAny=true;
         }
+        if(isAny){
+            $bottomBtn.css("background-color","#C40000");
+            $bottomBtn.removeAttr("disabled");
+        }
+        else{
+            $bottomBtn.css("background-color","#AAAAAA");
+            $bottomBtn.css("disabled","disabled");
+        }
     })
-    if(isAny){
-        $("button.bottom-button").css("background-color","#C40000");
-        $("button.bottom-button").removeAttr("disabled");
-    }
-    else{
-        $("button.bottom-button").css("background-color","#AAAAAA");
-        $("button.bottom-button").css("disabled","disabled");
-    }
 }
-function checkIsAll(){
+function checkAll(){
     var isAll=true;
-    $("img.radio-check").each(function(){
-        if("false"==$(this).attr("isselected")){
+    $radioCart.each(function(){
+        var isselected=$(this).attr("isselected");
+        if("false"==isselected){
             isAll=false;
         }
     });
     if(isAll){
-        $("img.radios-check").attr("isselect","isselect");
-        $("img.radios-check").attr("src","site/cartSelected.png");
+        $allCart.attr("src","site/cartSelected.png");
     }
     else{
-        $("img.radios-check").attr("isselect","false");
-        $("img.radios-check").attr("src","site/cartNotSelected.png");
+        $allCart.attr("src","site/cartNotSelected.png");
     }
 }
-$("img.radio-check").click(function(){
+function cal(){
+    var totalNumber=0;
+    var sumPrice=0;
+    $("img.radio-check[isselected='true']").each(function(){
+        var oid=$(this).attr("oid");
+        var price=$("span.nowPrice[oid="+oid+"]").text();
+        var number=$("input[oid="+oid+"]").val();
+        price=price.replace(/￥/,"");
+        price=price*number;
+        totalNumber+=new Number(number);
+        sumPrice+=new Number(price);
+    });
+    $("span.bottom-price").html("￥"+sumPrice);
+}
+$radioCart.click(function(){
     var isselected=$(this).attr("isselected");
-    if(isselected=="isselected"){
+    if(isselected=="false"){
+        $(this).attr("isselected","true");
+        $(this).attr("src","site/cartSelected.png");
+        $(this).parents("tr.cart-item").css("background","#FFF8E1");
+    }
+    else{
         $(this).attr("isselected","false");
         $(this).attr("src","site/cartNotSelected.png");
-        $(this).parents("tr.cart-item").css("background-color","#fff");
+        $(this).parents("tr.cart-item").css("background","#fff");
+    }
+    isAny();
+    checkAll();
+    cal();
+});
+$allCart.click(function(){
+    var isselected=$(this).attr("isselected");
+    if("true"==isselected){
+        $(this).attr("isselected","false");
+        $(this).attr("src","site/cartNotSelected.png"); 
+        $radioCart.attr("isselected","false");
+        $radioCart.attr("src","site/cartNotSelected.png");
+        $radioCart.parents("tr.cart-item").css("background","#fff");
     }
     else{
-        $(this).attr("isselected","isselected");
+        $(this).attr("isselected","true");
         $(this).attr("src","site/cartSelected.png");
-        $(this).parents("tr.cart-item").css("background-color","#FFF8E1");
+        $radioCart.attr("isselected","true");
+        $radioCart.attr("src","site/cartSelected.png");
+        $radioCart.parents("tr.cart-item").css("background","#FFF8E1");
     }
     isAny();
     cal();
-    checkIsAll();
-})  
-$("img.radios-check").click(function(){
-    var isselect=$(this).attr("isselect");
-    if(isselect=="isselect"){
-        $(this).attr("isselect","false");
-        $(this).attr("src","site/cartNotSelected.png");
-        $("img.radio-check").each(function(){
-            $(this).attr("isselected","false");
-            $(this).attr("src","site/cartNotSelected.png");
-            $(this).parents("tr.cart-item").css("background-color","#fff");
-        })
-    }
-    else{
-        $(this).attr("isselect","isselect");
-        $(this).attr("src","site/cartSelected.png");
-        $("img.radio-check").each(function(){
-            $(this).attr("isselected","isselected");
-            $(this).attr("src","site/cartSelected.png");
-            $(this).parents("tr.cart-item").css("background-color","#FFF8E1");
-        })
-    }
-    isAny();
-    cal();
-    checkIsAll();
-})
-function cal(){
-    var sumPrice=0;
-    var totalNumber=0;
-    $("img.radio-check[isselected='isselected']").each(function(){
-        var oid=$(this).attr("oid");
-        var price=$(".nowPrice[oid="+oid+"]").text();
-        var num=$("input.text[oid="+oid+"]").val();
-        price=price.replace(/￥/g,"");
-        price=price*num;
-        sumPrice+=new Number(price);
-        totalNumber+=new Number(num);
-    });
-    $("span.bottom-price,span.title-price").html("￥"+sumPrice);
-    $("span.total").html(totalNumber);
-}
+});
 $("a.increase").click(function(){
     var pid=$(this).attr("pid");
-    var oid=$(".text[oid="+pid+"]").attr("oid");
-    var num=$(".text[oid="+oid+"]").val();
-    num++;
-    $(".text[oid="+oid+"]").val(num);
-    var oid_=$("img.radio-check[oid="+oid+"]").attr("oid");
-    var num_=$("input.text[oid="+oid_+"]").val();
-    var price_=$(".nowPrice[oid="+oid_+"]").text();
-    price_=price_.replace(/￥/g,"");
-    price_=price_*num_;
-    var smallPrice=new Number(price_);
-    smallPrice=formatMoney(smallPrice);
-    $("span.calPrice[oid="+oid+"]").html("￥"+smallPrice);
-    isAny();
+    var number=$(this).parent().find("input[oid="+pid+"]").val();
+    number++;
+    $("input[oid="+pid+"]").val(number);
+    var calPrice=0;
+    var nowPrice=0;
+    nowPrice=$("span.nowPrice[oid="+pid+"]").text();
+    nowPrice=nowPrice.replace(/￥/,"");
+    nowPrice=new Number(nowPrice);
+    calPrice=nowPrice*number;
+    // calPrice=formatMoney(calPrice);
+    $("span.calPrice[oid="+pid+"]").text("￥"+calPrice);
     cal();
-    checkIsAll();
 });
 $("a.decrease").click(function(){
     var pid=$(this).attr("pid");
-    var oid=$(".text[oid="+pid+"]").attr("oid");
-    var num=$(".text[oid="+oid+"]").val();
-    num--;
-    $(".text[oid="+oid+"]").val(num);
-    var oid_=$("img.radio-check[oid="+oid+"]").attr("oid");
-    var num_=$("input.text[oid="+oid_+"]").val();
-    var price_=$(".nowPrice[oid="+oid_+"]").text();
-    price_=price_.replace(/￥/g,"");
-    price_=price_*num_;
-    var smallPrice=new Number(price_);
-    smallPrice=formatMoney(smallPrice);
-    $("span.calPrice[oid="+oid+"]").html("￥"+smallPrice);
-    isAny();
+    var number=$(this).parent().find("input[oid="+pid+"]").val();
+    number--;
+    $("input[oid="+pid+"]").val(number);
+    var calPrice=0;
+    var nowPrice=0;
+    nowPrice=$("span.nowPrice[oid="+pid+"]").text();
+    nowPrice=nowPrice.replace(/￥/,"");
+    nowPrice=new Number(nowPrice);
+    calPrice=nowPrice*number;
+    // calPrice=formatMoney(calPrice);
+    $("span.calPrice[oid="+pid+"]").text("￥"+calPrice);
     cal();
-    checkIsAll();
 });
+
 /*========================================我的订单页交互=========================================*/
 $("a[selectType]").click(function(){
     var selectType=$(this).attr("selectType");
